@@ -1,18 +1,14 @@
 class BookingsController < ApplicationController
-
-  def index
-    @bookings = Booking.all
-  end
-
-  def new
-    @booking = Booking.new
-    @mooring = Mooring.new
-  end
-
   def create
     @booking = Booking.new(booking_params)
-    @booking.save
-    redirect_to dashboard_path
+    @mooring = Mooring.find(params[:mooring_id])
+    @booking.mooring = @mooring
+    @booking.user = current_user
+    if @booking.save
+      redirect_to dashboard_path
+    else
+      render "moorings/show"
+    end
   end
 
   def destroy

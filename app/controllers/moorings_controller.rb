@@ -5,6 +5,7 @@ class MooringsController < ApplicationController
   end
 
   def show
+    @booking = Booking.new
     @mooring = Mooring.find(params[:id])
   end
 
