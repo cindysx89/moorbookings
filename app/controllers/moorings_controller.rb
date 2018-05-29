@@ -1,0 +1,2 @@
+class MooringsController < ApplicationController
+end
