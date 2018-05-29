@@ -1,5 +1,8 @@
 <div class="container">
+  <h2>Booking Page for <%= @mooring.name %></h2>
+
   <div class="form-wrapper">
+
     <%= simple_form_for :search, method: "get" do |f| %>
       <%= f.input :starts_at, as: :string, required: false, input_html: {class: "flatpickr"} %>
       <%= f.input :ends_at, as: :string, required: false, input_html: {class: "flatpickr"} %>
