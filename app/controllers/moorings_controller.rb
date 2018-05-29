@@ -14,25 +14,25 @@ class MooringsController < ApplicationController
 
   def create
     @mooring = Mooring.save
-    @mooring.user = admin
-    if @mooring.save
+    if @mooring.user == admin
+      @mooring.save
       redirect_to moorings_path
     else
-      render :new
+      redirect_to moorings_path
+      alert("You can't do that")
     end
   end
 
   def destroy
-    @mooring.user = admin
-    @mooring = Mooring.find(params[:id])
-    @mooring.destroy
-    redirect_to dashboard_path
+    if @mooring.user = admin
+      @mooring = Mooring.find(params[:id])
+      @mooring.destroy
+      redirect_to dashboard_path
+    end
+
+    private
+
+    def mooring_params
+      params.require(:mooring).permit(:location)
+    end
   end
-
-  private
-
-  def mooring_params
-    params.require(:mooring).permit(:location)
-  end
-
-end
