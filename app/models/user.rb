@@ -6,4 +6,8 @@ class User < ApplicationRecord
 
   has_many :bookings
   has_many :moorings
+
+  def name
+    "#{id} - #{email}"
+  end
 end
