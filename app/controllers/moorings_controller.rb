@@ -23,10 +23,13 @@ class MooringsController < ApplicationController
   end
 
   def destroy
-    @mooring.user = admin
-    @mooring = Mooring.find(params[:id])
-    @mooring.destroy
-    redirect_to dashboard_path
+    if @mooring.user == admin
+      @mooring = Mooring.find(params[:id])
+      @mooring.destroy
+      redirect_to dashboard_path
+    else
+      redirect_to dashboard_path, alert: "You can't do that mate"
+    end
   end
 
   private
