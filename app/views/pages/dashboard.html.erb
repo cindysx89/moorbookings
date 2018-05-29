@@ -1,1 +1,5 @@
-hi
+<ul>
+  <% @bookings.each do |booking| %>
+    <li><%= link_to booking.mooring.name, mooring_path(booking.mooring) %> from <%= booking.start_date %> to <%= booking.end_date %></li>
+  <% end %>
+</ul>
