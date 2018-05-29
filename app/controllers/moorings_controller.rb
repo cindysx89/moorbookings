@@ -8,5 +8,4 @@ class MooringsController < ApplicationController
     @mooring = Mooring.find(params[:id])
   end
 
-
 end
