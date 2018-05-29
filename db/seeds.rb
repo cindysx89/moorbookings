@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Mooring.destroy_all
+Mooring.create!(name: 'Chocolate canal', longitude: '-62.14805', latitude: '128.51489')
+Mooring.create!(name: 'Stawberry canal', longitude: '25.50254', latitude: '175.39889')
