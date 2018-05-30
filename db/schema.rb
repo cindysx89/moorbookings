@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_30_113203) do
+ActiveRecord::Schema.define(version: 2018_05_30_163940) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,8 +53,8 @@ ActiveRecord::Schema.define(version: 2018_05_30_113203) do
   end
 
   create_table "moorings", force: :cascade do |t|
-    t.decimal "longitude"
-    t.decimal "latitude"
+    t.float "longitude"
+    t.float "latitude"
     t.string "name"
     t.string "picture"
     t.datetime "created_at", null: false
