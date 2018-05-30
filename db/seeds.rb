@@ -11,13 +11,46 @@ User.destroy_all
 Booking.destroy_all
 
 puts "Creating moorings"
-mooring_one = Mooring.create!(name: 'Chocolate canal', longitude: '-62.14805', latitude: '128.51489')
-mooring_two = Mooring.create!(name: 'Stawberry canal', longitude: '25.50254', latitude: '175.39889')
+paddington_one = Mooring.create!(name: 'Paddington 1', longitude: '-0.181087', latitude: '51.522387')
+paddington_two = Mooring.create!(name: 'Paddington 2', longitude: '-0.180738', latitude: '51.522574')
+paddington_three = Mooring.create!(name: 'Paddington 3', longitude: '-0.180392', latitude: '51.522758')
+paddington_four = Mooring.create!(name: 'Paddington 4', longitude: '-0.179896', latitude: '51.523037')
+paddington_five = Mooring.create!(name: 'Paddington 5', longitude: '-0.179439', latitude: '51.523291')
+camden_one = Mooring.create!(name: 'Camden 1', longitude: '-0.132197', latitude: '51.538319')
+camden_two = Mooring.create!(name: 'Camden 2', longitude: '-0.131964', latitude: '51.538184')
+camden_three = Mooring.create!(name: 'Camden 3', longitude: '-0.131620', latitude: '51.538038')
+camden_four = Mooring.create!(name: 'Camden 4', longitude: '-0.131333', latitude: '51.537897')
+camden_five = Mooring.create!(name: 'Camden 5', longitude: '-0.131087', latitude: '51.537776')
+kingscross_one = Mooring.create!(name: 'Kings Cross 1', longitude: '-0.121549', latitude: '51.535419')
+kingscross_two = Mooring.create!(name: 'Kings Cross 2', longitude: '-0.120371', latitude: '51.535330')
+kingscross_three = Mooring.create!(name: 'Kings Cross 3', longitude: '-0.119513', latitude: '51.535255')
+kingscross_four = Mooring.create!(name: 'Kings Cross 4', longitude: '-0.118552', latitude: '51.535179')
+kingscross_five = Mooring.create!(name: 'Kings Cross 5', longitude: '-0.116543', latitude: '51.534984')
+angel_one = Mooring.create!(name: 'Angel 1', longitude: '-0.101936', latitude: '51.533121')
+angel_two = Mooring.create!(name: 'Angel 2', longitude: '-0.101614', latitude: '51.533079')
+angel_three = Mooring.create!(name: 'Angel 3', longitude: '-0.101285', latitude: '51.533044')
+angel_four = Mooring.create!(name: 'Angel 4', longitude: '-0.100924', latitude: '51.532995')
+angel_five = Mooring.create!(name: 'Angel 5', longitude: '-0.100681', latitude: '51.532959')
+angel_six = Mooring.create!(name: 'Angel 6', longitude: '-0.099441', latitude: '51.532823')
+angel_seven = Mooring.create!(name: 'Angel 7', longitude: '-0.097895', latitude: '51.532744')
+angel_eight = Mooring.create!(name: 'Angel 8', longitude: '-0.097444', latitude: '51.532840')
+angel_nine = Mooring.create!(name: 'Angel 9', longitude: '-0.096269', latitude: '51.533160')
+angel_ten = Mooring.create!(name: 'Angel 10', longitude: '-0.095950', latitude: '51.533270')
+broadwaymarket_one = Mooring.create!(name: 'Broadway Market 1', longitude: '-0.069290', latitude: '51.535835')
+broadwaymarket_two = Mooring.create!(name: 'Broadway Market 2', longitude: '-0.068890', latitude: '51.535791')
+broadwaymarket_three = Mooring.create!(name: 'Broadway Market 3', longitude: '-0.068297', latitude: '51.535749')
+broadwaymarket_four = Mooring.create!(name: 'Broadway Market 4', longitude: '-0.067804', latitude: '51.535730')
+broadwaymarket_five = Mooring.create!(name: 'Broadway Market 5', longitude: '-0.067239', latitude: '51.535717')
 
-puts "Creating one user"
-user = User.create(email: "niall@lewagon.com", password: "123456")
+puts "Creating users"
+user_niall = User.create(email: "niall@lewagon.com", password: "123456")
+user_cindy = User.create(email: "cindy@lewagon.com", password: "123456")
+user_adrien = User.create(email: "adrien@lewagon.com", password: "123456")
+
 
 puts "Creating bookings"
-Booking.create(start_date: Date.today, end_date: Date.today + 2, user: user, mooring: mooring_one )
-Booking.create(start_date: Date.today, end_date: Date.today + 2, user: user, mooring: mooring_two )
+Booking.create(start_date: Date.today, end_date: Date.today + 2, user: user_niall, mooring: paddington_one)
+Booking.create(start_date: Date.today, end_date: Date.today + 2, user: user_cindy, mooring: angel_two)
+Booking.create(start_date: Date.today, end_date: Date.today + 2, user: user_adrien, mooring: camden_two)
 
+puts "Database seeded"
