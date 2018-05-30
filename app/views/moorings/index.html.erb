@@ -5,7 +5,6 @@
   data-markers="<%= @markers.to_json %>"
 ></div>
 
-
 <ul>
   <% @moorings.each do |mooring| %>
     <li><%= link_to mooring.name, mooring_path(mooring) %></li>
