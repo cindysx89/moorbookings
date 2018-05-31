@@ -10,14 +10,11 @@ class MooringsController < ApplicationController
         @moorings = Mooring.all
       end
 
-
-
-
     @markers = @moorings.map do |mooring|
       {
         lat: mooring.latitude,
-        lng: mooring.longitude#,
-        # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
+        lng: mooring.longitude,
+        infoWindow: { content: render_to_string(partial: "/moorings/moorings", locals: { mooring: mooring }) }
       }
     end
   end
