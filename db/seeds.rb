@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "Cleaning DB"
 Mooring.destroy_all
+Amenity.destroy_all
 User.destroy_all
 Booking.destroy_all
 
@@ -42,11 +43,16 @@ broadwaymarket_three = Mooring.create!(name: 'Broadway Market 3', longitude: '-0
 broadwaymarket_four = Mooring.create!(name: 'Broadway Market 4', longitude: '-0.067804', latitude: '51.535730')
 broadwaymarket_five = Mooring.create!(name: 'Broadway Market 5', longitude: '-0.067239', latitude: '51.535717')
 
+puts "Creating amenities"
+paddington_amenities = Amenity.create!(picture: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/London_UK_Little-Venice-01.jpg/1920px-London_UK_Little-Venice-01.jpg', longitude: '-0.184299', latitude: '51.521254', rubbish_point: true, pump_out: true, water_point: true, toilets: true, elsan: true)
+camden_amenities = Amenity.create!(picture: 'https://lily.cdn.prismic.io/lily/c58398d57f0abf55beaea25afd5fd42374c91f53_camden-lock-bridge-camden-market_cm_jo_hero.jpg', longitude: '-0.128643', latitude: '51.536257', rubbish_point: true, pump_out: false,  water_point: false, toilets: false, elsan: false)
+angel_amenities = Amenity.create!(picture: 'https://i.pinimg.com/564x/e7/47/bf/e747bf1fa4e60d5bbd30628a81ac002b.jpg', longitude: '-0.099985', latitude: '51.532870', rubbish_point: true, pump_out: false,  water_point: true, toilets: false, elsan: false)
+broadwaymarket_amenities = Amenity.create!(picture: 'https://78.media.tumblr.com/tumblr_m7ejr1X5QJ1qgsymxo1_500.jpg', longitude: '-0.063524', latitude: '51.535590', rubbish_point: false, pump_out: false,  water_point: true, toilets: false, elsan: true)
+
 puts "Creating users"
 user_niall = User.create(email: "niall@lewagon.com", password: "123456")
 user_cindy = User.create(email: "cindy@lewagon.com", password: "123456")
 user_adrien = User.create(email: "adrien@lewagon.com", password: "123456")
-
 
 puts "Creating bookings"
 Booking.create(start_date: Date.today, end_date: Date.today + 2, user: user_niall, mooring: paddington_one)
