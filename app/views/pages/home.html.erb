@@ -1,9 +1,34 @@
 <h1>Moor world</h1>
-  <%= form_tag moorings_path, method: :get do %>
-    <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Search for a mooring spot" %>
+<%= form_tag moorings_path, method: :get do %>
+<%= text_field_tag :query,
+params[:query],
+class: "form-control",
+  placeholder: "Search for a mooring spot" %>
 
-    <input type="submit" class="btn btn-primary">
+  <input type="submit" class="btn btn-primary">
   <% end %>
+
+  <div class="container">
+
+    <h1>Our popular moorings</h1>
+
+    <div class="outer-card">
+      <div class="card">
+        <img src="https://canalrivertrust.org.uk/refresh/media/original/27533.jpg?v=a42329">
+        <h4>Hackney Central</h4>
+        <div class="button">available</div>
+      </div>
+
+      <div class="card">
+        <img src="https://canalrivertrust.org.uk/refresh/media/original/27533.jpg?v=a42329">
+        <h4>Hackney Central</h4>
+        <div class="button">available</div>
+      </div>
+
+      <div class="card">
+        <img src="https://canalrivertrust.org.uk/refresh/media/original/27533.jpg?v=a42329">
+        <h4>Hackney Central</h4>
+        <div class="button">available</div>
+      </div>
+    </div>
+  </div>
