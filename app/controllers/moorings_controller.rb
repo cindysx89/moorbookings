@@ -2,13 +2,8 @@ class MooringsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
 
   def index
-    @moorings = Mooring.where.not(latitude: nil, longitude: nil)
-
-    # @markers = [{
-    #     lat: 51.506158,
-    #     lng: -0.087024 }]
-
-
+    @moorings = Mooring.all
+    @moorings = Mooring.where.not(latitude: nil, longitu
     @markers = @moorings.map do |mooring|
       {
         lat: mooring.latitude,
