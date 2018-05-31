@@ -3,8 +3,7 @@ class MooringsController < ApplicationController
 
   def index
     @moorings = Mooring.all
-    @moorings = Mooring.where.not(latitude: nil, longitude: nil)
-
+    @moorings = Mooring.where.not(latitude: nil, longitu
     @markers = @moorings.map do |mooring|
       {
         lat: mooring.latitude,
