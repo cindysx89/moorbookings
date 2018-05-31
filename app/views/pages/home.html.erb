@@ -1,14 +1,5 @@
 
-<h1>Moor world</h1>
-<%= form_tag moorings_path, method: :get do %>
-<%= text_field_tag :query,
-params[:query],
-class: "form-control",
-  placeholder: "Search for a mooring spot" %>
 
-  <input type="submit" class="btn btn-primary">
-  <% end %>
- 
 <div class="container-banner">
   <div class="banner-content">
     <h1 class="ml11">
@@ -27,27 +18,27 @@ class: "form-control",
     </div>
   </div>
 
-    <h1>Our popular moorings</h1>
+  <h1>Our popular moorings</h1>
 
-    <div class="outer-card">
-      <div class="card">
-        <img src="https://canalrivertrust.org.uk/refresh/media/original/27533.jpg?v=a42329">
-        <h4>Hackney Central</h4>
-        <div class="button">available</div>
-      </div>
-
-      <div class="card">
-        <img src="https://canalrivertrust.org.uk/refresh/media/original/27533.jpg?v=a42329">
-        <h4>Hackney Central</h4>
-        <div class="button">available</div>
-      </div>
-
-      <div class="card">
-        <img src="https://canalrivertrust.org.uk/refresh/media/original/27533.jpg?v=a42329">
-        <h4>Hackney Central</h4>
-        <div class="button">available</div>
-      </div>
+  <div class="outer-card">
+    <div class="card">
+      <img src="https://canalrivertrust.org.uk/refresh/media/original/27533.jpg?v=a42329">
+      <h4>Hackney Central</h4>
+      <div class="button">available</div>
     </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-<%= javascript_pack_tag "textanimation" %>
+    <div class="card">
+      <img src="https://canalrivertrust.org.uk/refresh/media/original/27533.jpg?v=a42329">
+      <h4>Hackney Central</h4>
+      <div class="button">available</div>
+    </div>
+
+    <div class="card">
+      <img src="https://canalrivertrust.org.uk/refresh/media/original/27533.jpg?v=a42329">
+      <h4>Hackney Central</h4>
+      <div class="button">available</div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <%= javascript_pack_tag "textanimation" %>
