@@ -1,9 +1,20 @@
-<h1>Moor world</h1>
-  <%= form_tag moorings_path, method: :get do %>
+<div class="container-banner">
+  <div class="banner-content">
+    <h1 class="ml11">
+      <span class="text-wrapper">
+        <span class="line line1"></span>
+        <span class="letters">Mooring made easy for you</span>
+      </span>
+    </h1>
+    <%= form_tag moorings_path, id: "form", method: :get do %>
     <%= text_field_tag :query,
     params[:query],
-    class: "form-control",
-    placeholder: "Search for a mooring spot" %>
+    class: "form-control search-input",
+      placeholder: "Search for a mooring spot" %>
+      <input type="submit" class="btn btn-primary">
+      <% end %>
+    </div>
+  </div>
 
-    <input type="submit" class="btn btn-primary">
-  <% end %>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<%= javascript_pack_tag "textanimation" %>
