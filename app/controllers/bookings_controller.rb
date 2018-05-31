@@ -5,6 +5,7 @@ class BookingsController < ApplicationController
     @booking.mooring = @mooring
     @booking.user = current_user
     if @booking.save
+      sleep(2.5)
       redirect_to dashboard_path
     else
       render "moorings/show"
@@ -13,6 +14,17 @@ class BookingsController < ApplicationController
 
   def show
     @booking = Booking.find(params[:id])
+  end
+
+  def edit
+    @booking = Booking.find(params[:id])
+  end
+
+  def update
+    @booking = Booking.find(params[:id])
+    # raise
+    @booking.update(booking_params)
+    redirect_to dashboard_path
   end
 
   def destroy
