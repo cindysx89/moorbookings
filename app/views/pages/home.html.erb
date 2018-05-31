@@ -1,10 +1,11 @@
 <h1>Moor world</h1>
-<%= link_to "Search mooring", moorings_path  %>
 
 
-<%= form_tag moorings_path, method: :get do %>
-<%= text_field_tag :query,
-params[:query],
-class: "form-control",
-placeholder: "Search for a mooring spot" %>
+  <%= form_tag moorings_path, method: :get do %>
+  <%= text_field_tag :query,
+  params[:query],
+  class: "form-control",
+  placeholder: "Search for a mooring spot" %>
+
+  <input type="submit" class="btn btn-primary">
 <% end %>
