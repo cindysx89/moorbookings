@@ -1,4 +1,37 @@
 // Specific CSS for your home-page
+div.outer-card {
+  margin: auto;
+  text-align: center;
+}
+
+div.card {
+  width: calc(80% / 3);
+  box-shadow: 1px 1px 1px 1px #888888;
+  background-color: white;
+  display: inline-block;
+  margin: 20px;
+  text-align: left;
+}
+
+div.card img {
+  max-width: 100%;
+}
+
+div.card h4 {
+  margin-left: 10px;
+}
+
+div.button {
+  font-size: 14px;
+  background-color: #62c9c2;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  width: 70px;
+  text-align: center;
+  color: white;
+}
+
 .container-banner {
   background-image: url(https://images.unsplash.com/photo-1505413687799-90481dfc0203?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c467fcfcc1e15ee9d8908a8e84a96057&auto=format&fit=crop&w=1350&q=80);
   display: flex;
@@ -57,3 +90,4 @@
   display: flex;
   justify-content: center;
 }
+
