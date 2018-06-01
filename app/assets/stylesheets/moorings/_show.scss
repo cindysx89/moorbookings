@@ -11,3 +11,30 @@ div.flatpickr-calendar {
 text-align: center;
 width: 308px;
 }
+
+// CSS for google map
+
+#map-btn a {
+  color: white;
+  text-align: center;
+}
+
+  #map-btn a:hover {
+    text-decoration: none;
+
+}
+
+div.infowindow-title {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 10px;
+}
+
+
+.gm-style-iw {
+  display: flex;
+  justify-content: center;
+}
+
+
