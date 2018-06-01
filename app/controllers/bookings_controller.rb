@@ -5,7 +5,6 @@ class BookingsController < ApplicationController
     @booking.mooring = @mooring
     @booking.user = current_user
     if @booking.save
-      sleep(2.5)
       redirect_to dashboard_path
     else
       render "moorings/show"
