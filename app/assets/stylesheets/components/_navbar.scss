@@ -1,20 +1,28 @@
 /* Main navbar */
 .navbar-wagon {
-  background-color: transparent;
+  background-color: white;
   transition: all 0.3s ease;
   height: 70px;
   padding: 0px 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed; /* Set the navbar to fixed position */
+  // position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
 }
-
+.navbar-fixed-top {
+  background-color: transparent;
+}
 /* Logo */
 .navbar-wagon-brand img {
   height: 50px;
+}
+
+.navbar-wagon-brand > span {
+  color: white;
+  text-decoration: none;
+
 }
 
 /* User Avatar */
