@@ -1,0 +1,12 @@
+#form {
+  .search-input {
+    background: none;
+    border-bottom: 1px white;
+    &::placeholder {
+      color: white;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}
