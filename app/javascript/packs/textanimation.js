@@ -15,16 +15,14 @@ anime.timeline({loop: true})
     translateX: [0,$(".ml11 .letters").width()],
     easing: "easeOutExpo",
     duration: 700,
-    delay: 100
+    delay: 700
   }).add({
     targets: '.ml11 .letter',
     opacity: [0,1],
     easing: "easeOutExpo",
-    duration: 600,
+    duration: 700,
     offset: '-=775',
-    delay: function(el, i) {
-      return 34 * (i+1)
-    }
+    delay: 700
   }).add({
     targets: '.ml11',
     opacity: 0,
