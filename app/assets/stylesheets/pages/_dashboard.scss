@@ -1,0 +1,27 @@
+.dashboard-container {
+  height: calc(100% - 70px);
+  padding-top: 100px;
+  margin: 0 auto;
+
+}
+
+h2 {
+  text-align: center;
+}
+
+.booking-content {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.mini-card {
+  padding: 50px 20px;
+  background-color: white;
+  margin: 30px 30px;
+  font-weight: lighter;
+  border-radius: 2%;
+  align-items: center;
+  width: 600px;
+}
