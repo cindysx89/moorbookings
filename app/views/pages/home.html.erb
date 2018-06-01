@@ -7,16 +7,15 @@
       </span>
     </h1>
     <%= form_tag moorings_path, id: "form", method: :get do %>
-    <%= text_field_tag :query,
-    params[:query],
-    class: "form-control search-input",
-      placeholder: "London" %>
-      <input type="submit" class="btn btn-primary">
-      <% end %>
-    </div>
+      <%= text_field_tag :query,
+      params[:query],
+      class: "form-control search-input",
+        placeholder: "London" %>
+    <% end %>
   </div>
+</div>
 
-  <h1>Our popular moorings</h1>
+<h1>Our popular moorings</h1>
 
   <div class="outer-card">
 
@@ -43,8 +42,8 @@
       <div class="button">available</div>
       <% end %>
     </div>
-
   </div>
+</div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-  <%= javascript_pack_tag "textanimation" %>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<%= javascript_pack_tag "textanimation" %>

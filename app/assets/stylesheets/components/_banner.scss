@@ -1,12 +1,58 @@
 #form {
   .search-input {
     background: none;
-    border-bottom: 1px white;
+    // border-bottom: 1px white;
     &::placeholder {
-      color: white;
+      color: rgba(255,255,255,0.6);
     }
-    &:focus {
-      outline: none;
-    }
+    color: white;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    font-size: 25px;
+    width: 73% !important;
   }
+  .search-input:focus {
+    box-shadow: none;
+    border-bottom: 2px solid white;
+  }
+}
+
+.banner-mooring {
+  height: 50vh;
+  background-size: cover;
+  position: relative;
+}
+
+.card-banner {
+  position: absolute;
+  bottom: 30px;
+  left: 10px;
+  display: flex;
+  justify-content: space-between;
+  // height: 60px;
+  margin: 20px;
+  text-align: center;
+}
+
+.card-banner h1 {
+  color: white;
+  margin: 0px;
+}
+
+// .card-banner button {
+//   margin: 0px;
+// }
+
+#label-mooring-status {
+  padding: 10px;
+  margin: 10px;
+  color: white;
+  background-color: #62c9c2;
+  border-radius:50px;
+}
+
+.mooring-header {
+  padding: 10px;
+  margin: 10px;
 }

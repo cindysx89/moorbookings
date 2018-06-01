@@ -1,9 +1,14 @@
+<div class="banner-mooring" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+           url(<%= cl_image_path('mooring1', gravity: 'north') %>)">
+  <div class="card-banner">
+    <h1 class="mooring-header"><%= @mooring.name %></h1>
+    <h4 id="label-mooring-status">available</h4>
+  </div>
+</div>
 <div class="container">
-  <h1><%= @mooring.name %></h1>
   <%= simple_form_for [@mooring, @booking] do |f| %>
   <%= f.input :start_date, as: :string, required: false, input_html: {class: "flatpickr"} %>
   <%= f.input :end_date, as: :string, required: false, input_html: {class: "flatpickr"} %>
-
   <%= f.button :submit, "Submit", class: "btn btn-primary", id: "sweet-alert" %>
   <% end %>
 </div>
