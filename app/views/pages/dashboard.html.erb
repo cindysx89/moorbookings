@@ -6,17 +6,28 @@
         <p>
           <%= booking.mooring.name %>
         </p>
-        <p>
-          Booking dates: <%= booking.start_date %> to <%= booking.end_date %>
-        </p>
-        <%= link_to "Edit", edit_booking_path(booking), class: "btn btn-primary"%>
-        <%= link_to "delete", booking_path(booking), method: :delete, class: "btn btn-danger"%>
+        <div class="image-container">
+          <% if booking.mooring.name.include? "Camden" %>
+            <%= image_tag("Camden_Lock.jpg", :alt => "camden", :class => "booking-avatar") %>
+          <% elsif booking.mooring.name.include? "Paddington" %>
+            <%= image_tag("Paddington.jpg", :alt => "paddington", :class => "booking-avatar") %>
+          <% elsif booking.mooring.name.include? "Angel" %>
+            <%= image_tag("Angel.jpg", :alt => "angel", :class => "booking-avatar") %>
+          <% elsif booking.mooring.name.include? "Broadway Market" %>
+            <%= image_tag("Broadway_market.jpg", :alt => "broadway market", :class => "booking-avatar") %>
+          <% end %>
+        </div>
+        <div>
+          <p>
+          Booking dates:
+          <%= booking.start_date %> to <%= booking.end_date %>
+          </p>
+        </div>
+        <div class="buttons-booking">
+          <%= link_to "Edit", edit_booking_path(booking), class: "btn btn-primary"%>
+          <%= link_to "Delete", booking_path(booking), method: :delete, class: "btn btn-danger"%>
+        </div>
       </div>
     <% end %>
   </div>
 </div>
-
-
-
-
-
