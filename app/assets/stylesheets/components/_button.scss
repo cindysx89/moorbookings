@@ -52,6 +52,7 @@
 
 .submit-mooring-date {
   background-color: rgba(0,0,0,0.0);
+  outline: none;
 }
 
 .submit-mooring-date:hover {
@@ -65,13 +66,15 @@ input {
 
 .button-datepicker {
   display: inline-block;
-  padding: 12px 24px;
+  padding: 10px 22px;
   border: 1px solid #74b49b;
   border-radius: 4px;
   transition: all 0.2s ease-in;
   position: relative;
   overflow: hidden;
   z-index: 2;
+  margin-top: 10px;
+  margin-bottom: 10px
 }
 .button-datepicker:before {
   content: "";
