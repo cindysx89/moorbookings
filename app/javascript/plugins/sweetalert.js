@@ -5,6 +5,11 @@ function bindSweetAlertButton() {
   if (formSubmitButton) { // protect other pages
     formSubmitButton.addEventListener('click', (e) => {
       e.preventDefault();
+      let valueStart = document.getElementById('booking_start_date').value
+      let valueEnd = document.getElementById('booking_end_date').value
+      if ((valueStart === "") || (valueEnd === "")) {
+        alert("Please fill in the dates")
+      } else {
       const bookingForm = document.getElementById('new_booking')
       swal({
         title: "Booking confirmed!",
@@ -13,6 +18,7 @@ function bindSweetAlertButton() {
       }).then(
       function(){bookingForm.submit()
       });
+      }
     });
   }
 }

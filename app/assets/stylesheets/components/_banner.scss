@@ -19,9 +19,11 @@
 }
 
 .banner-mooring {
-  height: 50vh;
+  height: 45vh;
   background-size: cover;
   position: relative;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .card-banner {
@@ -48,11 +50,19 @@
   padding: 10px;
   margin: 10px;
   color: white;
+  font-size: 25px;
   background-color: #62c9c2;
   border-radius:50px;
+  text-align: center;
+  vertical-align: middle;
+  // line-height: 90px;       /* the same as your div height */
 }
 
 .mooring-header {
   padding: 10px;
   margin: 10px;
+  font-size: 43px;
+  text-align: center;
+  vertical-align: middle;
+  // line-height: 90px;       /* the same as your div height */
 }
