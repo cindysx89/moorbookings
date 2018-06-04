@@ -28,4 +28,4 @@
 //   }
 // }
 
-  export { bindSweetAlertButton };
+  // export { bindSweetAlertButton };
