@@ -1,6 +1,6 @@
 <div class="container">
   <h1><%= @booking.mooring.name %></h1>
-  <%= simple_form_for @booking do |f| %>
+  <%= simple_form_for @booking, html: {id: "edit-form"} do |f| %>
   <%= f.input :start_date, as: :string, required: false, input_html: {class: "flatpickr"} %>
   <%= f.input :end_date, as: :string, required: false, input_html: {class: "flatpickr"} %>
 
