@@ -26,7 +26,8 @@ class MooringsController < ApplicationController
         lat: amenity.latitude,
         lng: amenity.longitude,
         icon: icon,
-        infoWindow: { content: render_to_string(partial: "/moorings/amenities", locals: { amenity: amenity }) }
+        infoWindow: { content: render_to_string(partial: "/moorings/amenities", locals: { amenity: amenity }) },
+
       }
     end
   end
