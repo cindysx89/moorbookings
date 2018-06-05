@@ -1,11 +1,12 @@
   .mini-card {
   // display: flex;
-  align-items: center;
+  // align-items: center;
   // padding: 20px 20px;
   background-color: white;
   font-weight: lighter;
   // width: 300px;
   margin: 0 auto;
+  width: 300px;
   // flex-wrap: wrap;
   // justify-content: space-between;
   margin: 30px;
@@ -31,14 +32,16 @@
     left: 0px;
   }
 }
-
+.dates {
+  margin: 40px 0px;
+}
 .dashboard-container {
   background-color: white;
   padding: 0px;
 }
 
 .booking-content {
-  display: flex;
+  // display: flex;
   // justify-content: space-around;
 }
 
@@ -55,11 +58,17 @@
   background-color: white;
   font-weight: lighter;
   border-radius: 1%;
-  width: 900px;
+  width: 100%;
   margin: 0 auto;
-  // flex-wrap: wrap;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 30px;
   margin-bottom: 30px;
   box-shadow: 1px 1px 5px #888888;
+}
+
+.container-booking-info{
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 50px;
 }
