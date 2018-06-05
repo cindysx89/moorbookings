@@ -53,6 +53,7 @@
 .submit-mooring-date {
   background-color: rgba(0,0,0,0.0);
   outline: none;
+  width: 100%;
 }
 
 .submit-mooring-date:hover {
@@ -74,7 +75,8 @@ input {
   overflow: hidden;
   z-index: 2;
   margin-top: 10px;
-  margin-bottom: 10px
+  margin-bottom: 10px;
+  width: 308px;
 }
 .button-datepicker:before {
   content: "";
