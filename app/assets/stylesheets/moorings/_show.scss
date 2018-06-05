@@ -18,9 +18,8 @@ width: 308px;
   color: white;
   text-align: center;
 }
-  #map-btn a:hover {
-    text-decoration: none;
-
+#map-btn a:hover {
+  text-decoration: none;
 }
 
 div.infowindow-title {
@@ -30,13 +29,18 @@ div.infowindow-title {
   padding: 10px 10px;
 }
 
-
 .gm-style-iw {
   display: flex;
   justify-content: center;
-}
 
+}
+div.gm-style-iw {
+  height: 250px;
+  overflow-y: auto;
+}
 
 .amenity-box {
   display: flex;
 }
+
+
