@@ -1,15 +1,52 @@
   .mini-card {
-  display: flex;
+  // display: flex;
   align-items: center;
-  padding: 20px 20px;
+  // padding: 20px 20px;
   background-color: white;
   font-weight: lighter;
-  border-radius: 1%;
-  width: 900px;
+  // width: 300px;
   margin: 0 auto;
   // flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  // justify-content: space-between;
+  margin: 30px;
   box-shadow: 1px 1px 5px #888888;
+  text-align: center;
+}
+
+.image-container {
+  // width: 100px;
+  position: relative;
+  height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  h4 {
+    position: absolute;
+    margin: 0;
+    color: white;
+    font-size: 25px;
+    text-shadow: 0 0 5px #000;
+    bottom: 35px;
+    width: 100%;
+    left: 0px;
+  }
+}
+
+.dashboard-container {
+  background-color: white;
+  padding: 0px;
+}
+
+.booking-content {
+  display: flex;
+  // justify-content: space-around;
+}
+
+.buttons-booking-container {
+  align-items: center;
+}
+
+.dates-container{
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
