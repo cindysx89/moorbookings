@@ -1,5 +1,4 @@
 .footer {
-  background: #092A35;
   height: 70px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
@@ -7,12 +6,13 @@
   align-items: center;
   margin-top: 100px;
 }
+
 .footer-links {
   margin: 0 auto;
 }
 
 .footer-links a {
-  color: white;
+  color: #092A35;
   opacity: 0.15;
   text-decoration: none;
   font-size: 24px;
