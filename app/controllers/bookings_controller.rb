@@ -5,6 +5,7 @@ class BookingsController < ApplicationController
     @booking.mooring = @mooring
     @booking.user = current_user
     if @booking.save
+      flash[:notice] = "Booking created successfully!"
       redirect_to dashboard_path
     else
       render "moorings/show"
@@ -22,6 +23,7 @@ class BookingsController < ApplicationController
   def update
     @booking = Booking.find(params[:id])
     @booking.update(booking_params)
+    flash[:notice] = "Booking edited successfully!"
     redirect_to dashboard_path
   end
 

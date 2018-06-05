@@ -52,6 +52,8 @@
 
 .submit-mooring-date {
   background-color: rgba(0,0,0,0.0);
+  outline: none;
+  width: 100%;
 }
 
 .submit-mooring-date:hover {
@@ -65,13 +67,16 @@ input {
 
 .button-datepicker {
   display: inline-block;
-  padding: 12px 24px;
+  padding: 10px 22px;
   border: 1px solid #74b49b;
   border-radius: 4px;
   transition: all 0.2s ease-in;
   position: relative;
   overflow: hidden;
   z-index: 2;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 308px;
 }
 .button-datepicker:before {
   content: "";
@@ -114,4 +119,10 @@ input {
   top: -45%;
   background-color: #74b49b;
   transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.buttons-booking-container {
+  // vertical-align: middle;
+  vertical-align: middle;
+  display: inline-block;
 }
