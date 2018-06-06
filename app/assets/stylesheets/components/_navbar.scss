@@ -7,13 +7,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  // position: fixed; /* Set the navbar to fixed position */
+  // position: fixed;
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
   color: white;
 }
-.navbar-fixed-top {
-  background-color: transparent;
+.navbar-fixed-toppest {
+  background-color: rgba(1,1,1,0);
 }
 /* Logo */
 .navbar-wagon-brand img {
