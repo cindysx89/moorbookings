@@ -1,5 +1,5 @@
 .form-datepicker {
-  background-color: white;
+  background-color: #F1EDED;
   z-index: -1;
   padding: 10px 20px;
   /* margin-top: 50px; */
@@ -42,3 +42,9 @@
     border-bottom: 2px solid white;
   }
 }
+
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+  background-color: white;
+}
+
+
