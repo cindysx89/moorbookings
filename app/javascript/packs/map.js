@@ -415,7 +415,8 @@ const mapElement = document.getElementById('map');
 if (mapElement) { // don't try to build a map if there's no div#map to inject in
   const map = new GMaps({ el: '#map', lat: 0, lng: 0 });
   const markers = JSON.parse(mapElement.dataset.markers);
-  console.log(markers);
+  // map.addMarkers(markers);
+
 
   markers.forEach((marker) => {
     let myLatLng = {lat: marker.lat, lng: marker.lng};
@@ -432,6 +433,8 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
           animation: google.maps.Animation.DROP,
           map: map,
         })
+    console.log(test)
+    console.log("hello")
     map.addMarker(test)
     test.addListener('click', function(e) {
       info.open(map, test);
@@ -442,7 +445,6 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
     });
 
   })
-
   if (markers.length === 0) {
     map.fitLatLngBounds(markers);
   }

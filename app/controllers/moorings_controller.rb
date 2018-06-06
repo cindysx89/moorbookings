@@ -37,7 +37,8 @@ class MooringsController < ApplicationController
     @markers = []
     @markers << {
         lat: @mooring.latitude,
-        lng: @mooring.longitude
+        lng: @mooring.longitude,
+        infoWindow: { content: render_to_string(partial: "/moorings/moorings", locals: { mooring: @mooring }) }
       }
     @amenities = Amenity.all
     @amenities.each do |amenity|
