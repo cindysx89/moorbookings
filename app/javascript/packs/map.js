@@ -403,11 +403,54 @@ const styles = [
 
 ];
 
+function drop() {
+  for (var i =0; i < markerArray.length; i++) {
+    setTimeout(function() {
+      addMarkerMethod();
+    }, i * 200);
+  }
+}
+
 const mapElement = document.getElementById('map');
 if (mapElement) { // don't try to build a map if there's no div#map to inject in
   const map = new GMaps({ el: '#map', lat: 0, lng: 0 });
   const markers = JSON.parse(mapElement.dataset.markers);
-  map.addMarkers(markers);
+  console.log(markers);
+
+  markers.forEach((marker) => {
+    let myLatLng = {lat: marker.lat, lng: marker.lng};
+    let info = new google.maps.InfoWindow({
+      content: marker.infoWindow.content,
+    });
+    let icon = marker.icon;
+
+    // console.log(marker.infoWindow.content)
+    let test = new google.maps.Marker({
+          position: myLatLng,
+          infoWindow: info,
+          icon: icon,
+          animation: google.maps.Animation.DROP,
+          map: map,
+        })
+    map.addMarker(test)
+    test.addListener('click', function(e) {
+
+
+      info.open(map, test);
+      document.querySelectorAll(".amenities-title")[0].parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.childNodes.forEach((child) => {
+        child.style.display = "none";
+      })
+      info.open(map, test);
+    });
+
+    // map.addMarker(new google.maps.Marker({
+    //     position: myLatLng,
+    //     infoWindow: marker.infoWindow,
+    //     animation: google.maps.Animation.DROP,
+    //     map: map,
+    //   }));
+
+  })
   if (markers.length === 0) {
     map.fitLatLngBounds(markers);
   }
@@ -421,6 +464,5 @@ map.addStyle({
 });
 map.setStyle('map_style');
 }
-
 
 
