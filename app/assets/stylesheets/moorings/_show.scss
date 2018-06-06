@@ -31,21 +31,58 @@ div.flatpickr-calendar {
 div.infowindow-title {
   font-size: 18px;
   font-weight: bold;
-  text-align: left;
-  padding: 10px 10px;
+  text-align: center;
   color: black;
   font-weight: lighter;
   position: relative;
+  text-align: center;
+}
+
+.infowindow-title p {
+  margin: 0 auto;
+}
+
+
+div.gm-style-iw {
+  padding-top: 13px;
 }
 
 .gm-style-iw {
   display: flex;
   justify-content: center;
-  position: absolute;
+  position: relative;
+}
+
+.amenity-container {
+  display: flex;
+  margin: 0 0;
 }
 
 .amenity-box {
-  display: flex;
+  padding: 5px 5px;
+  margin: 0 0;
+}
+
+.amenity-box p {
+  margin: 0 0;
+}
+
+.map-mooring-image {
+  width: 190px;
+  overflow-x: hidden;
+}
+
+.mooring-title {
+  z-index: 1;
+  color: white;
+  font-size: 23px;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  left: 0;
+  font-family: "Raleway", "Helvetica", "sans-serif";
+  font-weight: 500;
+  line-height: 1.1;
 }
 
 
