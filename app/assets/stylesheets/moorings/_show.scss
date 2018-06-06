@@ -80,7 +80,33 @@ div.gm-style-iw {
   width: 100%;
   text-align: center;
   left: 0;
-  font-family: "Raleway", "Helvetica", "sans-serif";
   font-weight: 500;
   line-height: 1.1;
 }
+
+#scroll {
+
+  margin-right: -15px;
+}
+
+#sticky {
+  position: sticky;
+  margin-left: -15px;
+  top: 20px;
+}
+
+div.col-md-5 h2 {
+  font-size: 24px;
+  text-align: left;
+  border-bottom: 1px solid black;
+}
+
+ul {
+  list-style-type: square;
+}
+
+p, li {
+  font-size: 16px;
+}
+
+
