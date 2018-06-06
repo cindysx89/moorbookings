@@ -434,10 +434,8 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
         })
     map.addMarker(test)
     test.addListener('click', function(e) {
-
-
       info.open(map, test);
-      document.querySelectorAll(".amenities-title")[0].parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.childNodes.forEach((child) => {
+      document.querySelectorAll(".mooring-title")[0].parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.childNodes.forEach((child) => {
         child.style.display = "none";
       })
       info.open(map, test);
@@ -452,7 +450,7 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
     map.setCenter(markers[0].lat, markers[0].lng);
     map.setZoom(16);
   }
-  end
+
 
 map.addStyle({
   styles: styles,
