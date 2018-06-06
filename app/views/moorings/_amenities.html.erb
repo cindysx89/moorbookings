@@ -1,36 +1,43 @@
 <div class="infowindow-title">
-  <p>Amenities</p>
+  <p class="amenities-title">Amenities</p>
 </div>
 
-<div class="amenity-box">
-  <p>Toilets
-    <% if amenity.toilets = true %>
-    <%= image_tag("toilets.png") %>
+<div class="amenity-container">
+  <div class="amenity-box">
+    <p>Toilets
+      <% if amenity.toilets = true %>
+      <%= image_tag("toilets.png") %>
+      <% end %>
+    </p>
+  </div>
+  <div class="amenity-box">
+    <p>Rubbish
+      <% if amenity.rubbish_point = true %>
+      <%= image_tag("trash.png") %>
+      <% end %>
+    </p>
+  </div>
+</div>
+
+<div class="amenity-container">
+  <div class="amenity-box">
+    <p>Water
+      <% if amenity.water_point = true %>
+      <%= image_tag("water.png") %>
+      <% end %>
+    </p>
+  </div>
+  <div class="amenity-box">
+    <p>Pump Out
+      <% if amenity.pump_out = true %>
+      <%= image_tag("pump.jpeg") %>
+    </p>
+  </div>
+
+
     <% end %>
-  </p>
-  <p>Rubbish
-    <% if amenity.rubbish_point = true %>
-    <%= image_tag("trash.png") %>
-    <% end %>
-  </p>
-</div>
-<div class="amenity-box">
-  <p>Water
-    <% if amenity.water_point = true %>
-    <%= image_tag("water.png") %>
-    <% end %>
-  </p>
-  <p>Pump Out
-    <% if amenity.pump_out = true %>
-    <%= image_tag("pump.jpeg") %>
-  </p>
-</div>
-
-
-  <% end %>
-
-
-
 
 </div>
+
+
 
