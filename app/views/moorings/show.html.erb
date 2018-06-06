@@ -1,96 +1,97 @@
 
 <%= render 'shared/navbar-search' %>
 <div class="banner-mooring" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-           url(<%= cl_image_path('mooring1', gravity: 'north') %>)">
-  <div class="card-banner">
-    <h1 class="mooring-header"><%= @mooring.name %></h1>
-    <h4 id="label-mooring-status">available</h4>
-  </div>
+url(<%= cl_image_path('mooring1', gravity: 'north') %>)">
+<div class="card-banner">
+  <h1 class="mooring-header"><%= @mooring.name %></h1>
+  <h4 id="label-mooring-status">available</h4>
+</div>
 </div>
 
-  <div class="container">
-    <div class="row">
-      <div class="container-booking-info">
-        <div class="col-xs-12 col-sm-4">
-          <div id="map" style="width:400px;height:400px" data-markers="<%= @markers.to_json %>"></div>
+<div class="container" id="mooring-show-container">
+  <div class="row">
+    <div class="container-booking-info">
+      <div class="col-md-5" id="scroll">
+        <div id="map" style="width:400px;height:400px" data-markers="<%= @markers.to_json %>"></div>
+
+
+        <% if @mooring.name.capitalize.include? "Camden" %>
+        <div class="amenities-container">
+          <h2>Amenities Near Camden</h2>
+          <p><strong>Toilets:</strong> less than 0.3km</p>
+          <p><strong>Fuel:</strong> less than 0.3km</p>
+          <p><strong>Pump:</strong> less than 0.3km</p>
+          <p><strong>Trash:</strong> less than 0.3km</p>
         </div>
-        <div class="col-xs-12 col-sm-4 col-sm-offset-2">
-          <div class="form-datepicker">
-            <h2>Pick a date</h2>
-            <%= simple_form_for [@mooring, @booking] do |f| %>
-              <%= f.input :start_date, as: :string, required: false, input_html: {class: "flatpickr"} %>
-              <%= f.input :end_date, as: :string, required: false, input_html: {class: "flatpickr"} %>
-              <span class="button-datepicker">
-                 <%= f.button :submit, "Submit", class: "submit-mooring-date" %>
-              </span>
-            <% end %>
-          </div>
+        <% elsif @mooring.name.capitalize.include? "Paddington" %>
+        <div class="amenities">
+          <h2>Amenities Near Paddington</h2>
+          <p>Toilets: less than 0.6km</p>
+          <p>Fuel: less than 0.6km</p>
+          <p>Pump: less than 0.6km</p>
+          <p>Trash: less than 0.6m</p>
         </div>
-        <div class="col-xs-12 col-sm-4 col-sm-offset-2">
 
-      <% if @mooring.name.capitalize.include? "Camden" %>
-          <div class="amenities-container">
-            <h2>Amenities Near Camden</h2>
-            <p>Toilets: less than 0.3km</p>
-            <p>Fuel: less than 0.3km</p>
-            <p>Pump: less than 0.3km</p>
-            <p>Trash: less than 0.3km</p>
-          </div>
-      <% elsif @mooring.name.capitalize.include? "Paddington" %>
-          <div class="amenities">
-            <h2>Amenities Near Paddington</h2>
-            <p>Toilets: less than 0.6km</p>
-            <p>Fuel: less than 0.6km</p>
-            <p>Pump: less than 0.6km</p>
-            <p>Trash: less than 0.6m</p>
-          </div>
-
-       <% elsif @mooring.name.capitalize.include? "Angel" %>
-          <div class="amenities">
-            <h2>Amenities Near Angel</h2>
-            <p>Toilets: less than 0.5km</p>
-            <p>Fuel: less than 0.5km</p>
-            <p>Pump: less than 0.5km</p>
-            <p>Trash: less than 0.5km</p>
-          </div>
-
-       <% elsif @mooring.name.capitalize.include? "Broadway" %>
-          <div class="amenities">
-            <h2>Amenities Near Broadway Market</h2>
-            <p>Toilets: less than 0.4km</p>
-            <p>Fuel: less than 0.4km</p>
-            <p>Pump: less than 0.4km</p>
-            <p>Trash: less than 0.4km</p>
-          </div>
-
-       <% elsif @mooring.name.capitalize.include? "Kings" %>
-          <div class="amenities">
-            <h2>Amenities Near Kings Cross</h2>
-            <p>Toilets: less than 0.2km</p>
-            <p>Fuel: less than 0.2km</p>
-            <p>Pump: less than 0.2km</p>
-            <p>Trash: less than 0.2km</p>
-          </div>
-
-      <% end %>
-
+        <% elsif @mooring.name.capitalize.include? "Angel" %>
+        <div class="amenities">
+          <h2>Amenities Near Angel</h2>
+          <p>Toilets: less than 0.5km</p>
+          <p>Fuel: less than 0.5km</p>
+          <p>Pump: less than 0.5km</p>
+          <p>Trash: less than 0.5km</p>
         </div>
+
+        <% elsif @mooring.name.capitalize.include? "Broadway" %>
+        <div class="amenities">
+          <h2>Amenities Near Broadway Market</h2>
+          <p>Toilets: less than 0.4km</p>
+          <p>Fuel: less than 0.4km</p>
+          <p>Pump: less than 0.4km</p>
+          <p>Trash: less than 0.4km</p>
+        </div>
+
+        <% elsif @mooring.name.capitalize.include? "Kings" %>
+        <div class="amenities">
+          <h2>Amenities Near Kings Cross</h2>
+          <p>Toilets: less than 0.2km</p>
+          <p>Fuel: less than 0.2km</p>
+          <p>Pump: less than 0.2km</p>
+          <p>Trash: less than 0.2km</p>
+        </div>
+
+        <% end %>
+
+
+        <h2>Useful information</h2>
+        <ul>
+          <li>£10 per night per boat (payment is taken at the time of the booking)</li>
+          <li>Booking can be made online or through the customer call centre</li>
+          <li>Bookings can be made for 1-7 days (max 7 days in a single visit)</li>
+          <li>Arrival time after 1pm, departure time by 12 noon</li>
+          <li>Bookings are made through the web licensing system so you will need to have an existing account (or set one up)</li>
+          <li>Bookings will be confirmed by email</li>
+          <li>Bookings can be changed or cancelled by you up to 14 days before the start of the booking period, or by calling the customer service centre if within 14 days of the start of the booking</li>
+          <li>An unpermitted use charge of £25 per day applies to boats that have not booked to use the moorings</li>
+        </ul>
+        <p>Read the full terms and conditions for moorings or the plain English explanation of the terms and conditions.</p>
       </div>
-    </div>
-  </div>
+      <div class="col-md-3"></div>
+      <div class="col-md-4" id="sticky">
 
-<div class="booking-rules-container">
-  <h4>Useful information</h4>
-  <ul>
-    <li>Booking can be made online or through the customer call centre</li>
-    <li>Bookings can be made for 1-14 days (max 14 days in a single visit)</li>
-    <li>Arrival time after 1pm, departure time by 12 noon</li>
-    <li>Bookings are made through the web licensing system so you will need to have an existing account (or set one up)</li>
-    <li>Bookings will be confirmed by email</li>
-    <li>Bookings can be changed or cancelled by you up to 5 days before the start of the booking period, or by calling the customer service centre if within 5 days of the start of the booking</li>
-    <li>An unpermitted use charge of £25 per day applies to boats that have not booked to use the moorings</li>
-  </ul>
-  <p></p>
-  <p>Read the <strong><a href="#">full terms and conditions</a></strong> for moorings or the plain English explanation of the terms and conditions.</p>
-  <p><strong><a href="#">Get in touch</a></strong> with the Canal River Trust for any questions</p>
+
+        <div class="form-datepicker">
+          <h2>Pick a date</h2>
+          <%= simple_form_for [@mooring, @booking] do |f| %>
+          <%= f.input :start_date, as: :string, required: false, input_html: {class: "flatpickr"} %>
+
+          <%= f.input :end_date, as: :string, required: false, input_html: {class: "flatpickr"} %>
+          <span class="button-datepicker">
+           <%= f.button :submit, "Submit", class: "submit-mooring-date" %>
+         </span>
+         <% end %>
+       </div>
+     </div>
+   </div>
+ </div>
 </div>
+

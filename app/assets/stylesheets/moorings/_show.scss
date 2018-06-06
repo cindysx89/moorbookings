@@ -87,11 +87,28 @@ div.gm-style-iw {
   line-height: 1.1;
 }
 
-p.mooring-title {
-  margin: 10px auto;
+#scroll {
+
+  margin-right: -15px;
 }
 
-p.amenities-title {
-  font-family: "PT Sans", "sans-serif";
-  font-size: 18px;
+#sticky {
+  position: sticky;
+  margin-left: -15px;
+  top: 20px;
 }
+
+div.col-md-5 h2 {
+  font-size: 24px;
+  text-align: left;
+  border-bottom: 1px solid black;
+}
+
+ul {
+  list-style-type: square;
+}
+
+p, li {
+  font-size: 16px;
+}
+
