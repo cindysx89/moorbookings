@@ -27,13 +27,53 @@
           </div>
         </div>
         <div class="col-xs-12 col-sm-4 col-sm-offset-2">
-          <div class="amenities">
-            <h2>Amenities Nearby</h2>
-            <p>Toilets</p>
-            <p>Fuel</p>
-            <p>Pump</p>
-            <p>Trash</p>
+
+      <% if @mooring.name.capitalize.include? "Camden" %>
+          <div class="amenities-container">
+            <h2>Amenities Near Camden</h2>
+            <p>Toilets: less than 0.3km</p>
+            <p>Fuel: less than 0.3km</p>
+            <p>Pump: less than 0.3km</p>
+            <p>Trash: less than 0.3km</p>
           </div>
+      <% elsif @mooring.name.capitalize.include? "Paddington" %>
+          <div class="amenities">
+            <h2>Amenities Near Paddington</h2>
+            <p>Toilets: less than 0.6km</p>
+            <p>Fuel: less than 0.6km</p>
+            <p>Pump: less than 0.6km</p>
+            <p>Trash: less than 0.6m</p>
+          </div>
+
+       <% elsif @mooring.name.capitalize.include? "Angel" %>
+          <div class="amenities">
+            <h2>Amenities Near Angel</h2>
+            <p>Toilets: less than 0.5km</p>
+            <p>Fuel: less than 0.5km</p>
+            <p>Pump: less than 0.5km</p>
+            <p>Trash: less than 0.5km</p>
+          </div>
+
+       <% elsif @mooring.name.capitalize.include? "Broadway" %>
+          <div class="amenities">
+            <h2>Amenities Near Broadway Market</h2>
+            <p>Toilets: less than 0.4km</p>
+            <p>Fuel: less than 0.4km</p>
+            <p>Pump: less than 0.4km</p>
+            <p>Trash: less than 0.4km</p>
+          </div>
+
+       <% elsif @mooring.name.capitalize.include? "Kings" %>
+          <div class="amenities">
+            <h2>Amenities Near Kings Cross</h2>
+            <p>Toilets: less than 0.2km</p>
+            <p>Fuel: less than 0.2km</p>
+            <p>Pump: less than 0.2km</p>
+            <p>Trash: less than 0.2km</p>
+          </div>
+
+      <% end %>
+
         </div>
       </div>
     </div>
