@@ -443,14 +443,8 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
       info.open(map, test);
     });
 
-    // map.addMarker(new google.maps.Marker({
-    //     position: myLatLng,
-    //     infoWindow: marker.infoWindow,
-    //     animation: google.maps.Animation.DROP,
-    //     map: map,
-    //   }));
-
   })
+
   if (markers.length === 0) {
     map.fitLatLngBounds(markers);
   }
@@ -458,6 +452,8 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
     map.setCenter(markers[0].lat, markers[0].lng);
     map.setZoom(16);
   }
+  end
+
 map.addStyle({
   styles: styles,
   mapTypeId: 'map_style'
