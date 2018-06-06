@@ -14,6 +14,11 @@
   text-align: center;
 }
 
+.mini-card:hover {
+    transform: scale(1.01p);
+  }
+
+
 .image-container {
   // width: 100px;
   position: relative;
@@ -33,7 +38,7 @@
   }
 }
 .dates {
-  margin: 40px 0px;
+  margin: 25px 0px;
 }
 .dashboard-container {
   background-color: white;
@@ -75,6 +80,6 @@
 
 .card-how-it-works {
   text-align: center;
-  padding: 10px 0px 10px;
+  padding: 10px 0px 20px;
   margin: 0px 40px 0px
 }

@@ -11,7 +11,7 @@
     </h1>
     <%= form_tag moorings_path, id: "form", method: :get do %>
       <%= text_field_tag :query,
-      params[:query],
+      params[:query], :autocomplete => :off,
       class: "form-control search-input",
         placeholder: "London" %>
     <% end %>
