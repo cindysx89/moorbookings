@@ -88,12 +88,19 @@ div.gm-style-iw {
 }
 
 #scroll {
+  padding: 0 100px;
+  // border: 1px solid #DBDBDB;
+  // border-radius: 4px;
+  color: #484848;
 
-  margin-right: -15px;
+
+}
+
+#scroll h2 {
+  text-align: center;
 }
 
 #sticky {
-  position: sticky;
   margin-left: -15px;
   top: 20px;
 }
@@ -110,5 +117,23 @@ ul {
 
 p, li {
   font-size: 16px;
+}
+
+.mini-map {
+  margin: 10px auto;
+}
+
+.color-text {
+  color: #afafaf;
+  font-weight: 900;
+}
+
+.amenities-container img {
+  padding-right: 40px;
+}
+
+div.amenities-container p {
+  text-align: center;
+  font-weight: 900;
 }
 
