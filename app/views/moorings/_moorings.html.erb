@@ -19,6 +19,9 @@
   <% elsif mooring.name.capitalize.include? "Kings" %>
     <%= cl_image_tag("kings",
       width: 200, height: 150, crop: :fill) %>
+  <% else %>
+    <%= cl_image_tag("kings",
+      width: 200, height: 150, crop: :fill) %>
 
   <% end %>
 
