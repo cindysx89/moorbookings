@@ -45,7 +45,7 @@ broadwaymarket_five = Mooring.create!(name: 'Broadway Market 5', longitude: '-0.
 
 puts "Creating amenities"
 paddington_amenities = Amenity.create!(picture: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/London_UK_Little-Venice-01.jpg/1920px-London_UK_Little-Venice-01.jpg', longitude: '-0.184299', latitude: '51.521254', rubbish_point: true, pump_out: true, water_point: true, toilets: true, elsan: true)
-camden_amenities = Amenity.create!(picture: 'https://lily.cdn.prismic.io/lily/c58398d57f0abf55beaea25afd5fd42374c91f53_camden-lock-bridge-camden-market_cm_jo_hero.jpg', longitude: '-0.128643', latitude: '51.536257', rubbish_point: true, pump_out: false,  water_point: false, toilets: false, elsan: false)
+camden_amenities = Amenity.create!(picture: 'https://lily.cdn.prismic.io/lily/c58398d57f0abf55beaea25afd5fd42374c91f53_camden-lock-bridge-camden-market_cm_jo_hero.jpg', longitude: '-0.128643', latitude: '51.536257', rubbish_point: true, pump_out : false,  water_point: false, toilets: false, elsan: false)
 angel_amenities = Amenity.create!(picture: 'https://i.pinimg.com/564x/e7/47/bf/e747bf1fa4e60d5bbd30628a81ac002b.jpg', longitude: '-0.099985', latitude: '51.532870', rubbish_point: true, pump_out: false,  water_point: true, toilets: false, elsan: false)
 broadwaymarket_amenities = Amenity.create!(picture: 'https://78.media.tumblr.com/tumblr_m7ejr1X5QJ1qgsymxo1_500.jpg', longitude: '-0.063524', latitude: '51.535590', rubbish_point: false, pump_out: false,  water_point: true, toilets: false, elsan: true)
 
