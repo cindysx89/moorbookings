@@ -9,7 +9,7 @@
       <% if amenity.toilets == true %>
       <p>Toilets</p> <%= image_tag("toilets.png") %>
       <% else %>
-      <p>Toilets</p> <%= image_tag "toilets.png", class: "transp" %>
+      <p class="trans-font">Toilets</p> <%= image_tag "toilets.png", class: "transp" %>
       <% end %>
   </div>
   <div class="amenity-box">
@@ -17,7 +17,7 @@
       <% if amenity.rubbish_point == true %>
       <p>Rubbish</p><%= image_tag("trash.png") %>
       <% else %>
-      <p>Rubbish</p> <%= image_tag "trash.png", class: "transp" %>
+      <p class="trans-font">Rubbish</p> <%= image_tag "trash.png", class: "transp" %>
       <% end %>
   </div>
 </div>
@@ -27,7 +27,7 @@
       <% if amenity.water_point == true %>
       <p>Water</p><%= image_tag("water.png") %>
       <% else %>
-      <p>Water</p> <%= image_tag "water.png", class: "transp" %>
+      <p class="trans-font">Water</p> <%= image_tag "water.png", class: "transp" %>
       <% end %>
   </div>
   <div class="amenity-box">
@@ -35,7 +35,7 @@
       <% if amenity.pump_out == true %>
       <p>Pump Out</p><%= image_tag("pump.jpg") %>
       <% else %>
-      <p>Pump Out</p> <%= image_tag "pump.jpg", class: "transp" %>
+      <p class="trans-font">Pump Out</p> <%= image_tag "pump.jpg", class: "transp" %>
       <% end %>
   </div>
 
