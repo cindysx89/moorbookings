@@ -28,48 +28,63 @@ url(<%= cl_image_path('mooring1', gravity: 'north') %>)">
 
 
         <% if @mooring.name.capitalize.include? "Camden" %>
-        <div class="amenities-container">
-          <h2>Amenities Near Camden</h2>
-            <p><%= image_tag("toilets") %> less than 0.3km</p>
-            <p><%= image_tag("fuel") %>less than 0.3km</p>
-            <p><%= image_tag("pump") %>less than 0.3km</p>
-            <p><%= image_tag("trash") %>less than 0.3km</p>
-        </div>
+
+          <h2>Amenities near Camden</h2>
+          <div class="amenities-container">
+            <p class="amenities-container-flex"><%= image_tag("toilets") %><i class="fas fa-times fa-2x"></i></p>
+            <p class="amenities-container-flex"><%= image_tag("water") %><i class="fas fa-times fa-2x"></i></p>
+          </div>
+          <div class="amenities-container">
+            <p class="amenities-container-flex"><%= image_tag("pump") %><i class="fas fa-times fa-2x"></i></p>
+            <p class="amenities-container-flex"><%= image_tag("trash") %><i class="fas fa-check fa-2x" id="check"></i></p>
+          </div>
+
         <% elsif @mooring.name.capitalize.include? "Paddington" %>
-        <div class="amenities-container">
-          <h2>Amenities Near Paddington</h2>
-            <p><%= image_tag("toilets") %> less than 0.3km</p>
-            <p><%= image_tag("fuel") %>less than 0.3km</p>
-            <p><%= image_tag("pump") %>less than 0.3km</p>
-            <p><%= image_tag("trash") %>less than 0.3km</p>
-        </div>
+
+          <h2>Amenities near Paddington</h2>
+          <div class="amenities-container">
+            <p class="amenities-container-flex"><%= image_tag("toilets") %><i class="fas fa-check fa-2x" id="check"></i></p>
+            <p class="amenities-container-flex"><%= image_tag("water") %><i class="fas fa-check fa-2x" id="check"></i></p>
+          </div>
+          <div class="amenities-container">
+            <p class="amenities-container-flex"><%= image_tag("pump") %><i class="fas fa-check fa-2x" id="check"></i></p>
+            <p class="amenities-container-flex"><%= image_tag("trash") %><i class="fas fa-check fa-2x" id="check"></i></p>
+          </div>
 
         <% elsif @mooring.name.capitalize.include? "Angel" %>
-        <div class="amenities-container">
-          <h2>Amenities Near Angel</h2>
-            <p><%= image_tag("toilets") %> less than 0.3km</p>
-            <p><%= image_tag("fuel") %>less than 0.3km</p>
-            <p><%= image_tag("pump") %>less than 0.3km</p>
-            <p><%= image_tag("trash") %>less than 0.3km</p>
-        </div>
+          <h2>Amenities near Angel</h2>
+         <div class="amenities-container">
+            <p class="amenities-container-flex"><%= image_tag("toilets") %><i class="fas fa-times fa-2x"></i></p>
+            <p class="amenities-container-flex"><%= image_tag("water") %><i class="fas fa-check fa-2x" id="check"></i></p>
+          </div>
+          <div class="amenities-container">
+            <p class="amenities-container-flex"><%= image_tag("pump") %><i class="fas fa-times fa-2x"></i></p>
+            <p class="amenities-container-flex"><%= image_tag("trash") %><i class="fas fa-check fa-2x" id="check"></i></p>
+          </div>
+
 
         <% elsif @mooring.name.capitalize.include? "Broadway" %>
-        <div class="amenities-container">
-          <h2>Amenities Near Broadway Market</h2>
-            <p><%= image_tag("toilets") %> less than 0.3km</p>
-            <p><%= image_tag("fuel") %>less than 0.3km</p>
-            <p><%= image_tag("pump") %>less than 0.3km</p>
-            <p><%= image_tag("trash") %>less than 0.3km</p>
-        </div>
+          <h2>Amenities near Broadway Market</h2>
+             <div class="amenities-container">
+            <p class="amenities-container-flex"><%= image_tag("toilets") %><i class="fas fa-times fa-2x"></i></p>
+            <p class="amenities-container-flex"><%= image_tag("water") %><i class="fas fa-check fa-2x" id="check"></i></p>
+          </div>
+          <div class="amenities-container">
+            <p class="amenities-container-flex"><%= image_tag("pump") %><i class="fas fa-times fa-2x"></i></p>
+            <p class="amenities-container-flex"><%= image_tag("trash") %><i class="fas fa-times fa-2x"></i></p>
+          </div>
 
         <% elsif @mooring.name.capitalize.include? "Kings" %>
-        <div class="amenities-container">
-          <h2>Amenities Near Kings Cross</h2>
-            <p><%= image_tag("toilets") %> less than 0.3km</p>
-            <p><%= image_tag("fuel") %>less than 0.3km</p>
-            <p><%= image_tag("pump") %>less than 0.3km</p>
-            <p><%= image_tag("trash") %>less than 0.3km</p>
-        </div>
+
+          <h2>Amenities near Kings Cross</h2>
+            <div class="amenities-container">
+            <p class="amenities-container-flex"><%= image_tag("toilets") %><i class="fas fa-times fa-2x"></i></p>
+            <p class="amenities-container-flex"><%= image_tag("water") %><i class="fas fa-times fa-2x"></i></p>
+          </div>
+          <div class="amenities-container">
+            <p class="amenities-container-flex"><%= image_tag("pump") %><i class="fas fa-times fa-2x"></i></p>
+            <p class="amenities-container-flex"><%= image_tag("trash") %><i class="fas fa-check fa-2x" id="check"></i></p>
+          </div>
 
         <% end %>
 

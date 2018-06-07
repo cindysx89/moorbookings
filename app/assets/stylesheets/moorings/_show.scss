@@ -131,16 +131,39 @@ p, li {
   font-weight: 900;
 }
 
-.amenities-container img {
-  padding-right: 40px;
+.amenities-container-flex {
+  margin: 10px auto;
+  height: 100px;
+  width: 100px;
 }
 
 .amenities-container {
-  padding-top: 30px;
+  display: flex;
+  padding-left: 60px;
+  padding-right: 60px;
+
 }
 
 div.amenities-container p {
   text-align: center;
   font-weight: 900;
+
 }
 
+.fa-times {
+  color: red;
+}
+
+.amenities-container #check {
+  color: #62c9c2;
+  padding: 0;
+}
+
+.amenities-container img {
+  padding-right: 20px;
+  padding-bottom: 12px;
+}
+
+p.amenities-flex {
+  margin: 0 0;
+}
