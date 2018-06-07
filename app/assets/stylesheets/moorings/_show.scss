@@ -58,18 +58,21 @@ div.gm-style-iw {
 .amenity-container {
   display: flex;
   margin: 0 0;
-  height: 100px;
-  width: 100px;
+
 }
 
 .amenity-box {
   margin: 10px 10px;
-  height: 40px;
-  width: 40px;
+  width: 70px;
+}
+
+.amenity-box img {
+  margin-left: 15px;
 }
 
 .amenity-box p {
   margin: 0 0;
+  text-align: center;
 }
 
 .map-mooring-image {
@@ -166,4 +169,7 @@ div.amenities-container p {
 
 p.amenities-flex {
   margin: 0 0;
+}
+.transp {
+  opacity: 0.1;
 }
