@@ -1,7 +1,7 @@
 
 <%= render 'shared/navbar-search' %>
 <div class="banner-mooring" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-url(<%= cl_image_path('mooring1', gravity: 'north') %>)">
+url(<%= cl_image_path('mooring1.png', gravity: 'north') %>)">
 <div class="card-banner">
   <h1 class="mooring-header"><%= @mooring.name %></h1>
   <h4 id="label-mooring-status">available</h4>
@@ -28,6 +28,7 @@ url(<%= cl_image_path('mooring1', gravity: 'north') %>)">
 
 
         <% if @mooring.name.capitalize.include? "Camden" %>
+
 
           <h2>Amenities near Camden</h2>
           <div class="amenities-container">
@@ -85,6 +86,7 @@ url(<%= cl_image_path('mooring1', gravity: 'north') %>)">
             <p class="amenities-container-flex"><%= image_tag("pump") %><i class="fas fa-times fa-2x"></i></p>
             <p class="amenities-container-flex"><%= image_tag("trash") %><i class="fas fa-check fa-2x" id="check"></i></p>
           </div>
+ 
 
         <% end %>
 
