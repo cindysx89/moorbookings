@@ -4,11 +4,26 @@
   </p>
 </div>
 <div class="map-mooring-image">
-
- <%= cl_image_tag("mooring1",
+  <% if mooring.name.capitalize.include? "Camden" %>
+    <%= cl_image_tag("camden",
+      width: 200, height: 150, crop: :fill) %>
+  <% elsif mooring.name.capitalize.include? "Paddington" %>
+    <%= cl_image_tag("paddington",
+      width: 200, height: 150, crop: :fill) %>
+  <% elsif mooring.name.capitalize.include? "Angel" %>
+    <%= cl_image_tag("angel",
+      width: 200, height: 150, crop: :fill) %>
+  <% elsif mooring.name.capitalize.include? "Broadway" %>
+    <%= cl_image_tag("broadway",
+      width: 200, height: 150, crop: :fill) %>
+  <% elsif mooring.name.capitalize.include? "Kings" %>
+    <%= cl_image_tag("kings",
       width: 200, height: 150, crop: :fill) %>
 
+  <% end %>
+
 </div>
+
 <div class="button" id="map-btn">
   <%= link_to "book now", mooring_path(mooring) %>
 </div>

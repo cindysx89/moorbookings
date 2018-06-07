@@ -36,7 +36,7 @@ url(<%= cl_image_path('mooring1', gravity: 'north') %>)">
             <p><%= image_tag("trash") %>less than 0.3km</p>
         </div>
         <% elsif @mooring.name.capitalize.include? "Paddington" %>
-        <div class="amenities">
+        <div class="amenities-container">
           <h2>Amenities Near Paddington</h2>
             <p><%= image_tag("toilets") %> less than 0.3km</p>
             <p><%= image_tag("fuel") %>less than 0.3km</p>
@@ -45,7 +45,7 @@ url(<%= cl_image_path('mooring1', gravity: 'north') %>)">
         </div>
 
         <% elsif @mooring.name.capitalize.include? "Angel" %>
-        <div class="amenities">
+        <div class="amenities-container">
           <h2>Amenities Near Angel</h2>
             <p><%= image_tag("toilets") %> less than 0.3km</p>
             <p><%= image_tag("fuel") %>less than 0.3km</p>
@@ -54,7 +54,7 @@ url(<%= cl_image_path('mooring1', gravity: 'north') %>)">
         </div>
 
         <% elsif @mooring.name.capitalize.include? "Broadway" %>
-        <div class="amenities">
+        <div class="amenities-container">
           <h2>Amenities Near Broadway Market</h2>
             <p><%= image_tag("toilets") %> less than 0.3km</p>
             <p><%= image_tag("fuel") %>less than 0.3km</p>
@@ -63,7 +63,7 @@ url(<%= cl_image_path('mooring1', gravity: 'north') %>)">
         </div>
 
         <% elsif @mooring.name.capitalize.include? "Kings" %>
-        <div class="amenities">
+        <div class="amenities-container">
           <h2>Amenities Near Kings Cross</h2>
             <p><%= image_tag("toilets") %> less than 0.3km</p>
             <p><%= image_tag("fuel") %>less than 0.3km</p>
