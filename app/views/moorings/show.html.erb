@@ -11,71 +11,68 @@ url(<%= cl_image_path('mooring1', gravity: 'north') %>)">
 <div class="container" id="mooring-show-container">
   <div class="row">
     <div class="container-booking-info">
-      <div class="col-md-5" id="scroll">
-        <div id="map" style="width:400px;height:400px" data-markers="<%= @markers.to_json %>"></div>
+      <div class="col-md-8" id="scroll">
+        <h2>Useful information</h2>
+        <ul>
+          <li>Booking can be made <span class="color-text"> online or through the customer call centre</span></li>
+          <li>Bookings can be made for <span class="color-text">1-7 days</span> (max 7 days in a single visit)</li>
+          <li>Arrival time after 1pm, <span class="color-text">departure time by 12 noon</span></li>
+          <li>Bookings are made through the web licensing system so you will need to have an existing account (or set one up)</li>
+          <li>Bookings will be <span class="color-text">confirmed by email</span></li>
+          <li><span class="color-text">Bookings can be changed or cancelled</span> by you up to 14 days before the start of the booking period, or by calling the customer service centre if within 14 days of the start of the booking</li>
+          <li>An unpermitted use charge of <span class="color-text">£25 per day</span> applies to boats that have not booked to use the moorings</li>
+        </ul>
+        <p>Read the full terms and conditions for moorings or the plain English explanation of the terms and conditions.</p>
 
 
         <% if @mooring.name.capitalize.include? "Camden" %>
         <div class="amenities-container">
           <h2>Amenities Near Camden</h2>
-          <p><strong>Toilets:</strong> less than 0.3km</p>
-          <p><strong>Fuel:</strong> less than 0.3km</p>
-          <p><strong>Pump:</strong> less than 0.3km</p>
-          <p><strong>Trash:</strong> less than 0.3km</p>
+            <p><%= image_tag("toilets") %> less than 0.3km</p>
+            <p><%= image_tag("fuel") %>less than 0.3km</p>
+            <p><%= image_tag("pump") %>less than 0.3km</p>
+            <p><%= image_tag("trash") %>less than 0.3km</p>
         </div>
         <% elsif @mooring.name.capitalize.include? "Paddington" %>
         <div class="amenities">
           <h2>Amenities Near Paddington</h2>
-          <p>Toilets: less than 0.6km</p>
-          <p>Fuel: less than 0.6km</p>
-          <p>Pump: less than 0.6km</p>
-          <p>Trash: less than 0.6m</p>
+            <p><%= image_tag("toilets") %> less than 0.3km</p>
+            <p><%= image_tag("fuel") %>less than 0.3km</p>
+            <p><%= image_tag("pump") %>less than 0.3km</p>
+            <p><%= image_tag("trash") %>less than 0.3km</p>
         </div>
 
         <% elsif @mooring.name.capitalize.include? "Angel" %>
         <div class="amenities">
           <h2>Amenities Near Angel</h2>
-          <p>Toilets: less than 0.5km</p>
-          <p>Fuel: less than 0.5km</p>
-          <p>Pump: less than 0.5km</p>
-          <p>Trash: less than 0.5km</p>
+            <p><%= image_tag("toilets") %> less than 0.3km</p>
+            <p><%= image_tag("fuel") %>less than 0.3km</p>
+            <p><%= image_tag("pump") %>less than 0.3km</p>
+            <p><%= image_tag("trash") %>less than 0.3km</p>
         </div>
 
         <% elsif @mooring.name.capitalize.include? "Broadway" %>
         <div class="amenities">
           <h2>Amenities Near Broadway Market</h2>
-          <p>Toilets: less than 0.4km</p>
-          <p>Fuel: less than 0.4km</p>
-          <p>Pump: less than 0.4km</p>
-          <p>Trash: less than 0.4km</p>
+            <p><%= image_tag("toilets") %> less than 0.3km</p>
+            <p><%= image_tag("fuel") %>less than 0.3km</p>
+            <p><%= image_tag("pump") %>less than 0.3km</p>
+            <p><%= image_tag("trash") %>less than 0.3km</p>
         </div>
 
         <% elsif @mooring.name.capitalize.include? "Kings" %>
         <div class="amenities">
           <h2>Amenities Near Kings Cross</h2>
-          <p>Toilets: less than 0.2km</p>
-          <p>Fuel: less than 0.2km</p>
-          <p>Pump: less than 0.2km</p>
-          <p>Trash: less than 0.2km</p>
+            <p><%= image_tag("toilets") %> less than 0.3km</p>
+            <p><%= image_tag("fuel") %>less than 0.3km</p>
+            <p><%= image_tag("pump") %>less than 0.3km</p>
+            <p><%= image_tag("trash") %>less than 0.3km</p>
         </div>
 
         <% end %>
 
-
-        <h2>Useful information</h2>
-        <ul>
-          <li>£10 per night per boat (payment is taken at the time of the booking)</li>
-          <li>Booking can be made online or through the customer call centre</li>
-          <li>Bookings can be made for 1-7 days (max 7 days in a single visit)</li>
-          <li>Arrival time after 1pm, departure time by 12 noon</li>
-          <li>Bookings are made through the web licensing system so you will need to have an existing account (or set one up)</li>
-          <li>Bookings will be confirmed by email</li>
-          <li>Bookings can be changed or cancelled by you up to 14 days before the start of the booking period, or by calling the customer service centre if within 14 days of the start of the booking</li>
-          <li>An unpermitted use charge of £25 per day applies to boats that have not booked to use the moorings</li>
-        </ul>
-        <p>Read the full terms and conditions for moorings or the plain English explanation of the terms and conditions.</p>
       </div>
-      <div class="col-md-3"></div>
+      <!-- <div class="col-md-2"></div> -->
       <div class="col-md-4" id="sticky">
 
 
@@ -89,7 +86,8 @@ url(<%= cl_image_path('mooring1', gravity: 'north') %>)">
            <%= f.button :submit, "Submit", class: "submit-mooring-date" %>
          </span>
          <% end %>
-       </div>
+        </div>
+        <div id="map" class="mini-map" style="width:360px;height:400px" data-markers="<%= @markers.to_json %>"></div>
      </div>
    </div>
  </div>
